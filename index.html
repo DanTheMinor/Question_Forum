@@ -23,6 +23,8 @@
     <script src="controllers/new-question.js"></script>
     <script src="controllers/question.js"></script>
     <script src="controllers/new-answer.js"></script>
+    <script src="controllers/edit-answer.js"></script>
+    <script src="controllers/answer.js"></script> <!-- same as edit answer -->
 
 
     <!-- MODELS -->
@@ -32,11 +34,12 @@
     <!-- ROUTES -->
     <script src='routes/questions.js'></script>
     <script src='routes/question.js'></script>
+    <script src='routes/answer.js'></script>
 
     <!-- TEMPLATES -->
     <script>
       EmberHandlebarsLoader.loadTemplates([
-        'application', 'questions', 'new-question', 'question', 'new-answer'
+        'application', 'questions', 'new-question', 'question', 'new-answer', 'edit-answer', 'answer'
       ]);
     </script>
   </head>

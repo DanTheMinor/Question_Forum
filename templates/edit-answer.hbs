@@ -1,0 +1,11 @@
+<h1>Answer</h1>
+
+<form>
+  <div class="form-group">
+    <label for="answer_body">Edit Answer</label>
+    {{input id="answer_body" class="form-control" value=answer_body}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save Answer</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete Answer</button>
+</form>

@@ -30,23 +30,14 @@
   <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
   <br>
   <p>
-    {{#link-to 'new-answer' this.id class="btn btn-primary"}}Answer Question{{/link-to}}
+    {{#link-to 'new-answer' class="btn btn-primary"}}Answer Question{{/link-to}}
   </p>
   <ul>
-    <p>
-      test below
-    </p>
+      <h4>Answers: </h4>
     {{#each answers}}
-      <li>{{answer_body}}</li>
+      <li>{{answer_body}}{{#link-to 'answer' this.id class="glyphicon glyphicon-pencil"}}Edit/Delete{{/link-to}}</li>
     {{/each}}
   </ul>
 {{/if}}
-
-
-
-
-<!-- <p>
-  {{#link-to 'add-item' this.id class="btn btn-primary"}}Add to Auction{{/link-to}}
-</p> -->
 
 {{outlet}}
