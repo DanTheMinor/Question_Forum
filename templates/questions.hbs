@@ -1,1 +1,12 @@
-<h1>Sample Text</h1>
+<h1>Question Forum</h1>
+
+  <ul>
+    {{#each}}
+      <!-- <li>{{#link-to 'catalog' this.id}}{{title}}{{/link-to}}</li> -->
+      <li>{{#link-to 'question' this.id}}{{author}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+
+<p>
+  {{#link-to 'new-question' classNames="btn btn-primary"}}Write a New Question{{/link-to}}
+</p>

@@ -1,3 +1,3 @@
-Auction.CatalogsController = Ember.ArrayController.extend({
+Forum.QuestionsController = Ember.ArrayController.extend({
 
 });

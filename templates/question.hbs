@@ -1,0 +1,52 @@
+<h1>{{author}}</h1>
+
+{{#if isEditingQuestion}}
+  <!-- QUESTION EDITING FORM -->
+  <form>
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input id="author" class="form-control" value=author}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{input id="description" class="form-control" value=description}}
+    </div>
+    <div class="form-group">
+      <label for="body">Question</label>
+      {{input id="body" class="form-control" value=body}}
+    </div>
+
+    <button class="btn btn-success" {{action 'save'}}>Save</button>
+  </form>
+{{else}}
+  <!-- QUESTION ATTRIBUTES, DELETE, EDIT AND ADD-ANSWER BUTTONS -->
+  <h3>Question Description</h3>
+  <h4>{{description}}</h4>
+
+  <h3>Question</h3>
+  <h4>{{body}}</h4>
+
+  <button class="btn btn-primary" {{action 'edit'}}>Edit Question</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
+  <br>
+  <p>
+    {{#link-to 'new-answer' this.id class="btn btn-primary"}}Answer Question{{/link-to}}
+  </p>
+  <ul>
+    <p>
+      test below
+    </p>
+    {{#each answers}}
+      <li>{{answer_body}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+
+
+
+<!-- <p>
+  {{#link-to 'add-item' this.id class="btn btn-primary"}}Add to Auction{{/link-to}}
+</p> -->
+
+{{outlet}}
