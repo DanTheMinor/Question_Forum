@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Forum</title>
+
+    <!-- LIBRARY -->
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="libs/ember-template-compiler-1.10.0.js"></script>
+    <script src="libs/ember-1.10.0.debug.js"></script>
+    <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+    <script src="libs/ember-data.js"></script>
+    <script src="libs/localstorage-adapter-0.5.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- AUCTION, ROUTER, STORE -->
+    <script src="forum.js"></script>
+    <script src="router.js"></script>
+    <script src="store.js"></script>
+
+
+    <!-- CONTROLLERS -->
+
+
+    <!-- MODELS -->
+    <script src="models/question.js"></script>
+
+
+    <!-- ROUTES -->
+    <script src='routes/questions.js'></script>
+
+
+    <!-- TEMPLATES -->
+    <script>
+      EmberHandlebarsLoader.loadTemplates([
+        'application', 'questions'
+      ]);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
